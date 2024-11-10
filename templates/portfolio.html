@@ -1,0 +1,35 @@
+<!-- templates/portfolio.html -->
+{% extends "base.html" %}
+
+{% block title %}Portfolio - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="other-page">
+    <h2 class="text-center">Portfolio</h2>
+    <p class="text-center lead">A collection of projects I’ve worked on, showcasing my skills and passion for development.</p>
+
+    <div class="row mt-4">
+        {% for project in projects %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename=project['image']) }}" class="card-img-top" alt="{{ project['title'] }}">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-laptop-code"></i> {{ project['title'] }}</h5>
+                    <p class="card-text">{{ project['description'] }}</p>
+                    <a href="{{ project['link'] }}" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <p class="text-center lead">If you'd like to see more of my work, feel free to check out my GitHub.</p>
+        <div class="container text-center">
+            <a href="https://github.com/Zews21?tab=repositories" class="btn btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View all projects
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

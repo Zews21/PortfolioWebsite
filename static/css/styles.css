@@ -1,0 +1,195 @@
+:root {
+    --background-color: #e3e0cf; /* General page background */
+    --text-color: #ffffff; /* White text for contrast */
+    --accent-color: #1e3a8a; /* Dark royal blue accent */
+    --secondary-color: #162447; /* Dark blue for secondary elements */
+    --hover-color: #b0bec5; /* Soft light gray for hover effects */
+    --dark-text: #1a1a2e; /* Darker text color for readability */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1, header h2, header p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Hero and Section Backgrounds */
+.hero, .about-preview, .portfolio-preview, footer {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--text-color);
+}
+
+.hero h1, .about-preview h2, .portfolio-preview h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #14213d;
+}
+
+/* Section Styles */
+.about-preview, .portfolio-preview {
+    padding: 40px 20px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: 300px;
+    min-width: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    color: var(--hover-color);
+}
+
+footer a {
+    color: var(--hover-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--text-color);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: var(--hover-color);
+}
+
+/* Icon Styling */
+.icon-accent, .about-preview i, .portfolio-preview i {
+    color: var(--text-color);
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.icon-accent:hover, .about-preview i:hover, .portfolio-preview i:hover {
+    color: var(--hover-color);
+}
+
+/* About Page Specific Styling */
+.about-page, .contact-page, .other-page {
+    color: var(--dark-text);
+}
+
+.about-page h1, .about-page h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Skills Section */
+.about-page .list-unstyled li {
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+.about-page img.rounded-circle {
+    padding: 5px;
+}

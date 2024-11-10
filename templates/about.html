@@ -1,0 +1,55 @@
+<!-- templates/about.html -->
+{% extends "base.html" %}
+
+{% block title %}About Me - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <!-- Introduction Section -->
+    <section class="text-center mb-5">
+        <h2>About Me</h2>
+        <p class="lead">I’m Darius, an aspiring software engineer on a journey to master the fundamentals and grow into more advanced areas of the field. Although I'm just starting out, I’m committed to learning and improving with each project I take on. I approach each challenge as an opportunity to build my knowledge, refine my skills, and gain the experience needed to create meaningful, reliable solutions. My path is just beginning, but with each step, I'm getting closer to my goal of making a lasting impact through my work.</p>
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Your Profile Picture" class="rounded-circle" width="150">
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section in about.html -->
+    <section class="mb-5 lead">
+        <h2 class="text-center">My Skills</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <h3><i class="fas fa-code"></i> Languages</h3>
+                <ul class="list-unstyled">
+                    <li> Python</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3><i class="fas fa-cubes"></i> Libraries</h3>
+                <ul class="list-unstyled">
+                    <li> Flask</li>
+                    <li> Bootstrap</li>
+                    <li> Tkinter</li>
+                    <li> Selenium WebDriver</li></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <ul class="list-unstyled">
+                    <li> Git & GitHub</li>
+                    <li>SQL</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Background Section -->
+    <section>
+        <h2 class="text-center">My Background</h2>
+        <p class="text-center mt-4 lead">
+            My journey in programming began as a hobby, sparked by a natural curiosity for how things work and a drive to create. Over time, this interest evolved into a deeper commitment to mastering software engineering. Alongside my own learning, I’ve found fulfillment in teaching younger students, where I strive to pass on what I've learned in a way that’s engaging and accessible. Looking ahead, I’m dedicated to making the most of my university years—building a strong foundation in computer science and exploring all the opportunities that will help me grow.
+        </p>
+    </section>
+</div>
+{% endblock %}

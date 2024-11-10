@@ -1,0 +1,46 @@
+<!-- templates/contact.html -->
+{% extends "base.html" %}
+
+{% block title %}Contact Me - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="contact-page">
+    <h1 class="text-center">Contact Me</h1>
+    <p class="text-center lead">Feel free to reach out using the form below!</p>
+
+    <form class="mt-4" method="POST" action="{{ url_for('contact') }}" id="contact-form">
+        {{ form.hidden_tag() }} <!-- CSRF token for security -->
+
+        <div class="form-group">
+            <label><i class="fas fa-user"></i> Name</label>
+            {{ form.name(class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email</label>
+            {{ form.email(class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            <label><i class="fas fa-tag"></i> Subject</label>
+            {{ form.subject(class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            <label><i class="fas fa-pencil-alt"></i> Message</label>
+             {{ form.message(class="form-control") }}<!-- CKEditor integration -->
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+
+    </form>
+
+    {% if message %}
+    <div class="alert alert-success mt-3" role="alert">
+        {{ message }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

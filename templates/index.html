@@ -1,0 +1,66 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section with Gradient Background -->
+<section class="hero jumbotron text-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <a href="{{ url_for('portfolio') }}" class="cta-button btn btn-lg">View My Work</a>
+    </div>
+</section>
+
+<!-- About Section with Icon -->
+<section class="about-preview text-center my-5">
+    <h2><i class="fas fa-user icon-accent"></i> About Me</h2>
+    <p>Hi, I'm Darius, a budding software engineer, steadily building my skills and growing more capable with each new challenge I tackle.</p>
+    <a href="{{ url_for('about') }}" class="btn btn-outline-secondary">Learn More</a>
+</section>
+
+<!-- Portfolio Section with Styled Project Cards -->
+<section class="portfolio-preview my-5">
+    <h2 class="text-center"><i class="fas fa-folder-open icon-accent"></i> Featured Projects</h2>
+    <div class="portfolio-gallery row">
+
+        <!-- Example Project Item 1 -->
+        <div class="col-md-4">
+            <div class="card project-item">
+                <img src="{{ url_for('static', filename='images/project1.jpg') }}" class="card-img-top" alt="Project 1">
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">Conceptual blog website.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Project Item 2 -->
+        <div class="col-md-4">
+            <div class="card project-item">
+                <img src="{{ url_for('static', filename='images/project2.jpg') }}" class="card-img-top" alt="Project 2">
+                <div class="card-body">
+                    <h5 class="card-title">Chrome dino bot</h5>
+                    <p class="card-text">A game bot for the dino game</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Project Item 3 -->
+        <div class="col-md-4">
+            <div class="card project-item">
+                <img src="{{ url_for('static', filename='images/project3.jpg') }}" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">Space invaders</h5>
+                    <p class="card-text">A copy of the Space Invaders game</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
